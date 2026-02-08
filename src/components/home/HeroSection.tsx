@@ -31,26 +31,25 @@ const HeroSection = () => {
             </div>
           </FadeIn>
 
-          <FadeIn delay={0.2}>
-            <div className="grid grid-cols-2 gap-4">
-              {[
-                { icon: Shirt, label: "Branded Apparel" },
-                { icon: Monitor, label: "Digital Solutions" },
-                { icon: CarFront, label: "Vehicle Wraps" },
-                { icon: Printer, label: "Print Marketing" },
-              ].map((item) => (
-                <div
-                  key={item.label}
-                  className="bg-secondary rounded-lg p-8 flex flex-col items-center justify-center gap-3 aspect-square"
-                >
-                  <item.icon size={40} className="text-primary" />
-                  <p className="text-sm font-medium text-foreground text-center">
-                    {item.label}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </FadeIn>
+          <div className="grid grid-cols-2 gap-4 relative z-50">
+            {[
+              { icon: Shirt, label: "Branded Apparel", path: "/services" },
+              { icon: Monitor, label: "Digital Solutions", path: "/services" },
+              { icon: CarFront, label: "Vehicle Wraps", path: "/services" },
+              { icon: Printer, label: "Print Marketing", path: "/services" },
+            ].map((item) => (
+              <Link
+                key={item.label}
+                to={item.path}
+                className="bg-secondary rounded-lg p-8 flex flex-col items-center justify-center gap-3 aspect-square hover:bg-secondary/80 hover:scale-105 transition-all duration-300 cursor-pointer shadow-sm hover:shadow-md relative z-20 pointer-events-auto"
+              >
+                <item.icon size={40} className="text-primary" />
+                <p className="text-sm font-medium text-foreground text-center">
+                  {item.label}
+                </p>
+              </Link>
+            ))}
+          </div>
         </div>
       </div>
     </section>
