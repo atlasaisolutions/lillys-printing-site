@@ -57,7 +57,8 @@ const About = () => {
               understand that your printed materials represent your brand. That's why
               we invest in the latest printing technology, maintain strict quality
               control processes, and continuously optimize our operations for speed and
-              accuracy.
+              accuracy. We are proud to serve businesses throughout the **Maryland metro area**,
+              including **Baltimore, Alexandria, Washington DC, Bethesda, and Rockville**.
             </p>
             <p className="text-muted-foreground leading-relaxed">
               Our partnership with Atlas Business Solutions has enabled us to automate

@@ -1,4 +1,5 @@
 import { useForm } from "react-hook-form";
+import { useLocation } from "react-router-dom";
 import emailjs from "@emailjs/browser";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
@@ -29,9 +30,17 @@ type ContactFormValues = z.infer<typeof contactSchema>;
 
 const Contact = () => {
   const { toast } = useToast();
+  const location = useLocation();
+
+  // Check if we navigated here with a specific service in mind
+  const serviceInterest = location.state?.service;
+  const defaultMessage = serviceInterest
+    ? `Hi, I'm interested in a quote for ${serviceInterest}...`
+    : "";
+
   const form = useForm<ContactFormValues>({
     resolver: zodResolver(contactSchema),
-    defaultValues: { name: "", email: "", phone: "", company: "", message: "" },
+    defaultValues: { name: "", email: "", phone: "", company: "", message: defaultMessage },
   });
 
   /* 

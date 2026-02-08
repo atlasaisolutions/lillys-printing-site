@@ -42,10 +42,10 @@ const Footer = () => {
             <h4 className="font-heading font-semibold mb-4">Services</h4>
             <div className="space-y-2">
               {[
+                "Vehicle Wraps",
+                "Apparel & Promo",
+                "Digital & Brand",
                 "Commercial Printing",
-                "Corporate Apparel",
-                "Large Format",
-                "Rush Production",
               ].map((s) => (
                 <p key={s} className="text-sm text-background/70">
                   {s}
@@ -59,7 +59,7 @@ const Footer = () => {
             <h4 className="font-heading font-semibold mb-4">Contact Us</h4>
             <div className="space-y-2 text-sm text-background/70">
               <p>info@lillysprinting.com</p>
-              <p>(555) 123-4567</p>
+              <p>(443) 454-2210</p>
               <p>Mon–Fri: 8AM – 6PM</p>
               <p>Sat: 9AM – 2PM</p>
             </div>

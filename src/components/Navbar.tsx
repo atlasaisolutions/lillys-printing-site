@@ -19,7 +19,7 @@ const Navbar = () => {
   return (
     <nav className="sticky top-0 z-50 bg-background/95 backdrop-blur border-b border-border">
       <div className="container mx-auto px-6 py-4 flex items-center justify-between">
-        <Link to="/" className="flex items-center gap-2">
+        <Link to="/" className="flex items-center gap-2" onClick={() => window.scrollTo(0, 0)}>
           <img src="/logo.png" alt="WS Consulting Solution" className="h-24 w-auto object-contain" />
         </Link>
 

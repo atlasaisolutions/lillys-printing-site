@@ -4,21 +4,21 @@ import { Quote } from "lucide-react";
 const testimonials = [
   {
     quote:
-      "Lilly's Printing transformed our brand presence. Their attention to detail and consistent quality across all our materials is unmatched.",
-    name: "Sarah Mitchell",
-    title: "Marketing Director, TechCorp Industries",
+      "Excellent work and very good service, I recommend them! They treated me directly and I recommend them 100%.",
+    name: "Viridiana Cervantes",
+    title: "Google Review",
   },
   {
     quote:
-      "We needed a printing partner who could handle enterprise-scale orders without sacrificing quality. Lilly's exceeded every expectation.",
-    name: "James Harrington",
-    title: "VP Operations, Metro Fitness Group",
+      "Great service and product!! Very accommodating!! Best place for your printing and wrapping needs for your company!",
+    name: "Local SoundStage",
+    title: "Google Review",
   },
   {
     quote:
-      "The turnaround time is incredible. What used to take weeks with other vendors, Lilly's delivers in days. A true game-changer for our business.",
-    name: "Diana Nguyen",
-    title: "CEO, GreenLeaf Products",
+      "Great art work and quick turn around time. The material used for our t-shirts is super soft. Highly recommend all their services.",
+    name: "Anthony Lee",
+    title: "Google Review",
   },
 ];
 

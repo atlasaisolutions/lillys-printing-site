@@ -6,79 +6,83 @@ import { Printer, Shirt, CarFront, Monitor } from "lucide-react";
 const services = [
   {
     icon: CarFront,
-    title: "Vehicle Wraps & Graphics",
+    title: "Large Format Printing & Wraps",
     image: "/service-wrap.png",
     description:
-      "Turn your company vehicles into powerful mobile billboards. Our premium vinyl wraps offering vibrant colors and durable protection while generating thousands of daily impressions.",
+      "Dominate the road and the street. From full vehicle fleets to storefront windows and wall murals, we turn any surface into a premium advertising space.",
     process: [
-      "Vehicle Measurement & Template Design",
-      "Custom Graphic Design & Approval",
-      "High-Resolution Vinyl Printing",
+      "Custom Design & Templates",
+      "Cars, Trucks, Vans & Food Trucks",
+      "Storefront & Wall Wraps",
       "Professional Installation",
     ],
     benefits: [
-      "24/7 Mobile Advertising",
-      "Protects Original Paint",
-      "Cost-Effective Marketing",
-      "5-7 Year Durability",
+      "Mobile Billboards (Thousands of impressions)",
+      "Protects Vehicle Paint",
+      "High-Durability Vinyl",
+      "5-7 Year Lifespan",
     ],
-  },
-  {
-    icon: Monitor,
-    title: "Digital Business Solutions",
-    image: "/service-digital.png",
-    description:
-      "We don't just print; we build brands online. From responsive websites to social media management, we help you connect with customers in the digital space.",
-    process: [
-      "Digital Strategy Discovery",
-      "UX/UI Design & Prototyping",
-      "Development & Optimization",
-      "Launch & Ongoing Management",
-    ],
-    benefits: [
-      "Mobile-Responsive Websites",
-      "SEO-Optimized Content",
-      "Unified Brand Identity",
-      "Social Media Growth",
-    ],
+    linkState: "Vehicle Wraps & Large Format",
   },
   {
     icon: Shirt,
-    title: "Apparel & Merchandise",
+    title: "Apparel & Promotional Products",
     image: null,
     description:
-      "Outfit your team in style with custom embroidered uniforms and screen-printed promotional gear. We source high-quality garments that look great and last long.",
+      "Build team unity and brand loyalty. We offer high-quality embroidery, screen printing, and a vast range of promotional items like mugs, pens, and bags.",
     process: [
-      "Garment Selection & Sizing",
-      "Logo Digitization or Screen Setup",
-      "Production & Quality Control",
-      "Folding & Packaging",
+      "Uniforms & Corporate Apparel",
+      "T-Shirt Screen Printing",
+      "Embroidery Services",
+      "Promotional Merchandise (Mugs, Pens)",
     ],
     benefits: [
-      "Premium Brands (Nike, Port Authority, etc.)",
-      "Durable Embroidery & Prints",
-      "Bulk Pricing Available",
-      "Fast Turnaround",
+      "Premium Garment Brands",
+      "Long-Lasting Prints",
+      "Bulk Order Discounts",
+      "Fast Production",
     ],
+    linkState: "Apparel & Promotional",
+  },
+  {
+    icon: Monitor,
+    title: "Brand Identity & Digital Solutions",
+    image: "/service-digital.png",
+    description:
+      "Your brand is more than a logo. We offer full-service design packages including logo creation, flyer design, social media management, and web design.",
+    process: [
+      "Logo & Identity Design",
+      "Flyer & Brochure Design",
+      "Web Design & Development",
+      "Social Media Management",
+    ],
+    benefits: [
+      "Modern, Professional Esthetic",
+      "Cohesive Brand Voice",
+      "Mobile-Optimized Websites",
+      "Increased Online Engagement",
+    ],
+    linkState: "Digital & Brand Identity",
   },
   {
     icon: Printer,
-    title: "Print Marketing",
+    title: "Commercial Printing",
     image: null,
     description:
-      "From business cards to large-scale banners, our commercial printing services ensure your physical marketing materials reflect the quality of your business.",
+      "Essential business materials delivered with precision. Business cards, flyers, brochures, and stationery that leave a lasting impression.",
     process: [
-      "File Review & Pre-Press",
-      "Proof Approval",
-      "Precision Printing",
-      "Finishing (Cut, Fold, Bind)",
+      "Business Cards & Stationaries",
+      "Flyers & Postcards",
+      "High-Volume Offset Printing",
+      "Finishing (Gloss, Matte, UV)",
     ],
     benefits: [
-      "High-Quality Paper Stocks",
-      "Vibrant Color Reproduction",
-      "Same-Day Rush Options",
+      "Same-Day Rush Available",
+      "Premium Paper Stocks",
+      "Vibrant Color Accuracy",
       "Direct Mail Services",
     ],
+    linkState: "Commercial Printing",
   },
 ];
 
@@ -155,7 +159,7 @@ const Services = () => {
                   </div>
 
                   <Button asChild size="lg" className="mt-2">
-                    <Link to="/contact">Get a Quote</Link>
+                    <Link to="/contact" state={{ service: service.linkState }}>Get a Quote</Link>
                   </Button>
                 </div>
 
