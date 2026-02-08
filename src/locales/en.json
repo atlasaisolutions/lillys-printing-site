@@ -1,0 +1,113 @@
+{
+    "nav": {
+        "home": "Home",
+        "services": "Services",
+        "about": "About",
+        "portfolio": "Portfolio",
+        "automation": "Automation",
+        "contact": "Contact",
+        "quote": "Request a Quote"
+    },
+    "hero": {
+        "title": "Transform Your Brand with",
+        "subtitle": "Premium Printing & Digital Solutions.",
+        "description": "Elevate your business presence with expert Vehicle Wraps, Custom Apparel, and Web Design.",
+        "cta_quote": "Request a Quote",
+        "cta_services": "Explore Services"
+    },
+    "services": {
+        "apparel": "Branded Apparel",
+        "digital": "Digital Solutions",
+        "wraps": "Vehicle Wraps",
+        "print": "Print Marketing"
+    },
+    "support": {
+        "powered_by": "Powered by",
+        "description": "Our AI-powered 24/7 automation ensures you always have access to speed, support, and status updates.",
+        "quote_requests": "Instant Quote Requests",
+        "quote_desc": "Get pricing estimates for your projects in seconds.",
+        "order_tracking": "Order Tracking",
+        "tracking_desc": "Monitor your order status from production to delivery.",
+        "inquiries": "Customer Inquiries",
+        "inquiries_desc": "Get answers to your questions anytime, day or night.",
+        "lead_capture": "Lead Capture",
+        "lead_desc": "Express interest and our team will follow up promptly."
+    },
+    "footer": {
+        "services": "Services",
+        "contact": "Contact Us",
+        "hours": "Mon–Fri: 8AM – 6PM",
+        "hours_sat": "Sat: 9AM – 2PM"
+    },
+    "services_page": {
+        "title": "Our Services",
+        "subtitle": "Comprehensive printing solutions engineered for businesses that demand excellence.",
+        "process": "Our Process",
+        "benefits": "Benefits",
+        "get_quote": "Get a Quote",
+        "wraps": {
+            "title": "Large Format Printing & Wraps",
+            "desc": "Dominate the road and the street. From full vehicle fleets to storefront windows and wall murals, we turn any surface into a premium advertising space.",
+            "process": [
+                "Custom Design & Templates",
+                "Cars, Trucks, Vans & Food Trucks",
+                "Storefront & Wall Wraps",
+                "Professional Installation"
+            ],
+            "benefits": [
+                "Mobile Billboards (Thousands of impressions)",
+                "Protects Vehicle Paint",
+                "High-Durability Vinyl",
+                "5-7 Year Lifespan"
+            ]
+        },
+        "apparel": {
+            "title": "Apparel & Promotional Products",
+            "desc": "Build team unity and brand loyalty. We offer high-quality embroidery, screen printing, and a vast range of promotional items like mugs, pens, and bags.",
+            "process": [
+                "Uniforms & Corporate Apparel",
+                "T-Shirt Screen Printing",
+                "Embroidery Services",
+                "Promotional Merchandise (Mugs, Pens)"
+            ],
+            "benefits": [
+                "Premium Garment Brands",
+                "Long-Lasting Prints",
+                "Bulk Order Discounts",
+                "Fast Production"
+            ]
+        },
+        "digital": {
+            "title": "Brand Identity & Digital Solutions",
+            "desc": "Your brand is more than a logo. We offer full-service design packages including logo creation, flyer design, social media management, and web design.",
+            "process": [
+                "Logo & Identity Design",
+                "Flyer & Brochure Design",
+                "Web Design & Development",
+                "Social Media Management"
+            ],
+            "benefits": [
+                "Modern, Professional Esthetic",
+                "Cohesive Brand Voice",
+                "Mobile-Optimized Websites",
+                "Increased Online Engagement"
+            ]
+        },
+        "print": {
+            "title": "Commercial Printing",
+            "desc": "Essential business materials delivered with precision. Business cards, flyers, brochures, and stationery that leave a lasting impression.",
+            "process": [
+                "Business Cards & Stationaries",
+                "Flyers & Postcards",
+                "High-Volume Offset Printing",
+                "Finishing (Gloss, Matte, UV)"
+            ],
+            "benefits": [
+                "Same-Day Rush Available",
+                "Premium Paper Stocks",
+                "Vibrant Color Accuracy",
+                "Direct Mail Services"
+            ]
+        }
+    }
+}

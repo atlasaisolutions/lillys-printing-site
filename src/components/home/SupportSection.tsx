@@ -2,50 +2,53 @@ import FadeIn from "@/components/FadeIn";
 import { MessageCircle, FileText, Package, UserPlus } from "lucide-react";
 import { Link } from "react-router-dom";
 
-const features = [
-  {
-    icon: FileText,
-    title: "Instant Quote Requests",
-    description: "Get pricing estimates for your projects in seconds.",
-    path: "/contact",
-  },
-  {
-    icon: Package,
-    title: "Order Tracking",
-    description: "Monitor your order status from production to delivery.",
-    path: "/contact",
-  },
-  {
-    icon: MessageCircle,
-    title: "Customer Inquiries",
-    description: "Get answers to your questions anytime, day or night.",
-    path: "/automation",
-  },
-  {
-    icon: UserPlus,
-    title: "Lead Capture",
-    description: "Express interest and our team will follow up promptly.",
-    path: "/contact",
-  },
-];
+
+
+import { useTranslation } from "react-i18next";
 
 const SupportSection = () => {
+  const { t } = useTranslation();
   return (
     <section className="py-20 bg-secondary relative overflow-hidden">
       <div className="container mx-auto px-6 relative z-10">
         <FadeIn>
           <div className="text-center mb-12">
             <h2 className="text-3xl lg:text-4xl font-heading font-bold text-foreground">
-              Powered by <span className="text-primary">Atlas.</span>
+              {t("support.powered_by")} <span className="text-primary">Atlas.</span>
             </h2>
             <p className="mt-4 text-muted-foreground max-w-2xl mx-auto">
-              Our AI-powered 24/7 automation ensures you always have access to speed, support, and status updates.
+              {t("support.description")}
             </p>
           </div>
         </FadeIn>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {features.map((f, i) => (
+          {[
+            {
+              icon: FileText,
+              title: t("support.quote_requests"),
+              description: t("support.quote_desc"),
+              path: "/contact",
+            },
+            {
+              icon: Package,
+              title: t("support.order_tracking"),
+              description: t("support.tracking_desc"),
+              path: "/contact",
+            },
+            {
+              icon: MessageCircle,
+              title: t("support.inquiries"),
+              description: t("support.inquiries_desc"),
+              path: "/automation",
+            },
+            {
+              icon: UserPlus,
+              title: t("support.lead_capture"),
+              description: t("support.lead_desc"),
+              path: "/contact",
+            },
+          ].map((f, i) => (
             <Link
               key={f.title}
               to={f.path}

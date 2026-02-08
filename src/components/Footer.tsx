@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 const Footer = () => {
+  const { t } = useTranslation();
   return (
     <footer className="bg-foreground text-background">
       <div className="container mx-auto px-6 py-16">
@@ -20,11 +22,11 @@ const Footer = () => {
             <h4 className="font-heading font-semibold mb-4">Quick Links</h4>
             <div className="space-y-2">
               {[
-                { name: "Home", path: "/" },
-                { name: "Services", path: "/services" },
-                { name: "About", path: "/about" },
-                { name: "Portfolio", path: "/portfolio" },
-                { name: "Contact", path: "/contact" },
+                { name: t("nav.home"), path: "/" },
+                { name: t("nav.services"), path: "/services" },
+                { name: t("nav.about"), path: "/about" },
+                { name: t("nav.portfolio"), path: "/portfolio" },
+                { name: t("nav.contact"), path: "/contact" },
               ].map((link) => (
                 <Link
                   key={link.name}
@@ -39,13 +41,13 @@ const Footer = () => {
 
           {/* Services */}
           <div>
-            <h4 className="font-heading font-semibold mb-4">Services</h4>
+            <h4 className="font-heading font-semibold mb-4">{t("footer.services")}</h4>
             <div className="space-y-2">
               {[
-                "Vehicle Wraps",
-                "Apparel & Promo",
-                "Digital & Brand",
-                "Commercial Printing",
+                t("services.wraps"),
+                t("services.apparel"),
+                t("services.digital"),
+                t("services.print"),
               ].map((s) => (
                 <p key={s} className="text-sm text-background/70">
                   {s}
@@ -56,12 +58,12 @@ const Footer = () => {
 
           {/* Contact */}
           <div>
-            <h4 className="font-heading font-semibold mb-4">Contact Us</h4>
+            <h4 className="font-heading font-semibold mb-4">{t("footer.contact")}</h4>
             <div className="space-y-2 text-sm text-background/70">
               <p>info@lillysprinting.com</p>
               <p>(443) 454-2210</p>
-              <p>Mon–Fri: 8AM – 6PM</p>
-              <p>Sat: 9AM – 2PM</p>
+              <p>{t("footer.hours")}</p>
+              <p>{t("footer.hours_sat")}</p>
             </div>
           </div>
         </div>

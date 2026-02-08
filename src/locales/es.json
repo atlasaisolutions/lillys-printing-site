@@ -1,0 +1,113 @@
+{
+    "nav": {
+        "home": "Inicio",
+        "services": "Servicios",
+        "about": "Nosotros",
+        "portfolio": "Portafolio",
+        "automation": "Automatización",
+        "contact": "Contacto",
+        "quote": "Solicitar Cotización"
+    },
+    "hero": {
+        "title": "Transforma tu Marca con",
+        "subtitle": "Impresión Premium y Soluciones Digitales.",
+        "description": "Eleva la presencia de tu negocio con Rotulación de Vehículos, Ropa Personalizada y Diseño Web.",
+        "cta_quote": "Solicitar Cotización",
+        "cta_services": "Explorar Servicios"
+    },
+    "services": {
+        "apparel": "Ropa de Marca",
+        "digital": "Soluciones Digitales",
+        "wraps": "Rotulación de Vehículos",
+        "print": "Marketing Impreso"
+    },
+    "support": {
+        "powered_by": "Impulsado por",
+        "description": "Nuestra automatización con IA 24/7 asegura acceso inmediato a velocidad, soporte y estado de pedidos.",
+        "quote_requests": "Cotizaciones Instantáneas",
+        "quote_desc": "Obtén estimaciones de precio para tus proyectos en segundos.",
+        "order_tracking": "Rastreo de Orden",
+        "tracking_desc": "Monitorea el estado de tu orden desde producción hasta entrega.",
+        "inquiries": "Consultas de Clientes",
+        "inquiries_desc": "Obtén respuestas a tus preguntas en cualquier momento, día o noche.",
+        "lead_capture": "Captura de Leads",
+        "lead_desc": "Expresa interés y nuestro equipo te contactará prontamente."
+    },
+    "footer": {
+        "services": "Servicios",
+        "contact": "Contáctanos",
+        "hours": "Lun–Vier: 8AM – 6PM",
+        "hours_sat": "Sab: 9AM – 2PM"
+    },
+    "services_page": {
+        "title": "Nuestros Servicios",
+        "subtitle": "Soluciones de impresión integrales diseñadas para empresas que exigen excelencia.",
+        "process": "Nuestro Proceso",
+        "benefits": "Beneficios",
+        "get_quote": "Obtener Cotización",
+        "wraps": {
+            "title": "Impresión de Gran Formato y Rotulación",
+            "desc": "Domina la carretera y la calle. Desde flotas de vehículos completas hasta escaparates y murales, convertimos cualquier superficie en un espacio publicitario premium.",
+            "process": [
+                "Diseño Personalizado y Plantillas",
+                "Carros, Camiones, Furgonetas y Food Trucks",
+                "Rotulación de Tiendas y Paredes",
+                "Instalación Profesional"
+            ],
+            "benefits": [
+                "Vallas Móviles (Miles de impresiones)",
+                "Protege la Pintura del Vehículo",
+                "Vinilo de Alta Durabilidad",
+                "Vida Útil de 5-7 Años"
+            ]
+        },
+        "apparel": {
+            "title": "Ropa y Productos Promocionales",
+            "desc": "Construye la unidad del equipo y la lealtad a la marca. Ofrecemos bordados de alta calidad, serigrafía y una amplia gama de artículos promocionales.",
+            "process": [
+                "Uniformes y Ropa Corporativa",
+                "Serigrafía de Camisetas",
+                "Servicios de Bordado",
+                "Mercancía Promocional (Tazas, Bolígrafos)"
+            ],
+            "benefits": [
+                "Marcas de Ropa Premium",
+                "Impresiones Duraderas",
+                "Descuentos por Pedidos al Mayor",
+                "Producción Rápida"
+            ]
+        },
+        "digital": {
+            "title": "Identidad de Marca y Soluciones Digitales",
+            "desc": "Tu marca es más que un logo. Ofrecemos paquetes completos de diseño que incluyen creación de logos, volantes, gestión de redes sociales y diseño web.",
+            "process": [
+                "Diseño de Logo e Identidad",
+                "Diseño de Volantes y Folletos",
+                "Diseño y Desarrollo Web",
+                "Gestión de Redes Sociales"
+            ],
+            "benefits": [
+                "Estética Moderna y Profesional",
+                "Voz de Marca Coherente",
+                "Sitios Web Optimizados para Móviles",
+                "Mayor Participación en Línea"
+            ]
+        },
+        "print": {
+            "title": "Impresión Comercial",
+            "desc": "Materiales esenciales entregados con precisión. Tarjetas de presentación, volantes, folletos y papelería que dejan una impresión duradera.",
+            "process": [
+                "Tarjetas de Presentación y Papelería",
+                "Volantes y Postales",
+                "Impresión Offset de Alto Volumen",
+                "Acabados (Brillo, Mate, UV)"
+            ],
+            "benefits": [
+                "Entrega Rápida el Mismo Día",
+                "Papeles Premium",
+                "Precisión de Color Vibrante",
+                "Servicios de Correo Directo"
+            ]
+        }
+    }
+}
