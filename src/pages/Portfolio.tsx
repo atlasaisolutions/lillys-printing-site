@@ -1,66 +1,59 @@
+import { useState } from "react";
+import { Link } from "react-router-dom";
+import { Button } from "@/components/ui/button";
 import FadeIn from "@/components/FadeIn";
+
+const categories = ["All", "Vehicle Wraps", "Apparel", "Large Format", "Digital"];
 
 const projects = [
   {
-    title: "TechCorp Annual Report",
-    industry: "Technology",
-    services: "Offset Printing, Binding",
-    result: "500-page premium bound report delivered in 5 business days",
+    title: "EcoFleet Van Wrap",
+    category: "Vehicle Wraps",
+    image: "/service-wrap.png",
+    description: "Full fleet wrap implementation for local eco-friendly delivery service.",
   },
   {
-    title: "Metro Fitness Rebrand",
-    industry: "Fitness & Wellness",
-    services: "Apparel, Signage",
-    result: "Complete branded apparel line for 12 franchise locations",
+    title: "TechStart Hoodie Series",
+    category: "Apparel",
+    image: "/service-digital.png", // Using digital image as placeholder for now
+    description: "Premium embroidered hoodies for tech startup launch event.",
   },
   {
-    title: "Downtown Gala Signage",
-    industry: "Events & Entertainment",
-    services: "Large Format Printing",
-    result: "40+ pieces of event signage and directional displays",
+    title: "Downtown Storefront",
+    category: "Large Format",
+    image: "https://images.unsplash.com/photo-1559136555-930d72f186c6?auto=format&fit=crop&q=80&w=800",
+    description: "Window graphics and illuminated signage for retail location.",
   },
   {
-    title: "GreenLeaf Product Catalog",
-    industry: "Consumer Goods",
-    services: "Digital Printing, Binding",
-    result: "120-page full-color catalog with premium matte finish",
+    title: "Metro Food Truck",
+    category: "Vehicle Wraps",
+    image: "https://images.unsplash.com/photo-1565123409695-7b5ef63a2efb?auto=format&fit=crop&q=80&w=800",
+    description: "Vibrant full wrap design for high-visibility food truck.",
   },
   {
-    title: "Horizon Bank Materials",
-    industry: "Financial Services",
-    services: "Commercial Printing",
-    result: "Complete stationery suite for 25 branch locations",
+    title: "Corporate Gala Banners",
+    category: "Large Format",
+    image: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&q=80&w=800",
+    description: "Large scale step-and-repeat banners for annual corporate event.",
   },
   {
-    title: "Summit Conference Package",
-    industry: "Corporate Events",
-    services: "Mixed Services",
-    result: "Badges, banners, programs, and promotional items for 2,000 attendees",
-  },
-  {
-    title: "Riverside Medical Signage",
-    industry: "Healthcare",
-    services: "Large Format, Wayfinding",
-    result: "Interior and exterior signage system for new facility",
-  },
-  {
-    title: "Atlas Business Rebrand",
-    industry: "Consulting",
-    services: "Full Branding Package",
-    result:
-      "Complete brand collateral including cards, letterheads, and presentations",
-  },
-  {
-    title: "Coastal Real Estate Mailers",
-    industry: "Real Estate",
-    services: "Direct Mail, Commercial Print",
-    result: "Monthly mailer campaign reaching 50,000 households",
+    title: "Lilly's Printing Rebrand",
+    category: "Digital",
+    image: "/service-digital.png",
+    description: "Complete identity overhaul including logo, web, and social assets.",
   },
 ];
 
 const Portfolio = () => {
+  const [activeCategory, setActiveCategory] = useState("All");
+
+  const filteredProjects =
+    activeCategory === "All"
+      ? projects
+      : projects.filter((p) => p.category === activeCategory);
+
   return (
-    <div className="py-20">
+    <div className="py-20 bg-background min-h-screen">
       <div className="container mx-auto px-6">
         <FadeIn>
           <div className="text-center mb-16">
@@ -68,38 +61,72 @@ const Portfolio = () => {
               Our Portfolio
             </h1>
             <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
-              A showcase of projects delivered with precision and professionalism.
+              A showcase of our premium work across vehicle wraps, apparel, and digital solutions.
             </p>
           </div>
         </FadeIn>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {projects.map((project, i) => (
-            <FadeIn key={project.title} delay={i * 0.06}>
-              <div className="group relative aspect-[4/3] rounded-lg overflow-hidden bg-muted cursor-pointer">
-                <div className="absolute inset-0 flex items-center justify-center p-4">
-                  <span className="text-muted-foreground/50 font-heading text-lg text-center">
-                    {project.title}
+        {/* Filters */}
+        <FadeIn delay={0.1}>
+          <div className="flex flex-wrap justify-center gap-4 mb-12">
+            {categories.map((cat) => (
+              <button
+                key={cat}
+                onClick={() => setActiveCategory(cat)}
+                className={`px-6 py-2 rounded-full text-sm font-medium transition-all duration-300 ${activeCategory === cat
+                    ? "bg-primary text-primary-foreground shadow-lg scale-105"
+                    : "bg-secondary text-secondary-foreground hover:bg-secondary/80"
+                  }`}
+              >
+                {cat}
+              </button>
+            ))}
+          </div>
+        </FadeIn>
+
+        {/* Grid */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
+          {filteredProjects.map((project, i) => (
+            <FadeIn key={project.title} delay={i * 0.1}>
+              <div className="group relative rounded-xl overflow-hidden shadow-md bg-secondary aspect-[4/3] cursor-pointer">
+                {/* Image */}
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
+                />
+
+                {/* Overlay */}
+                <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center p-6 text-center">
+                  <span className="text-primary text-sm font-bold uppercase tracking-wider mb-2">
+                    {project.category}
                   </span>
-                </div>
-                <div className="absolute inset-0 bg-primary/90 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center text-primary-foreground p-6">
-                  <h3 className="font-heading font-bold text-lg">
+                  <h3 className="text-white font-heading font-bold text-xl mb-2">
                     {project.title}
                   </h3>
-                  <p className="text-xs text-primary-foreground/70 mt-1 uppercase tracking-wide">
-                    {project.industry}
-                  </p>
-                  <p className="text-sm text-primary-foreground/80 mt-3">
-                    {project.services}
-                  </p>
-                  <p className="text-sm text-primary-foreground/90 mt-2 leading-relaxed">
-                    {project.result}
+                  <p className="text-white/80 text-sm">
+                    {project.description}
                   </p>
                 </div>
               </div>
             </FadeIn>
           ))}
         </div>
+
+        {/* CTA */}
+        <FadeIn delay={0.2}>
+          <div className="bg-primary/5 border border-primary/20 rounded-2xl p-12 text-center">
+            <h2 className="text-2xl lg:text-3xl font-heading font-bold text-foreground mb-4">
+              See something you like?
+            </h2>
+            <p className="text-muted-foreground max-w-xl mx-auto mb-8">
+              Let's bring your vision to life. Request a quote today and get a custom proposal for your project.
+            </p>
+            <Button asChild size="lg">
+              <Link to="/contact">Start Your Project</Link>
+            </Button>
+          </div>
+        </FadeIn>
       </div>
     </div>
   );
