@@ -83,8 +83,8 @@ export const getGeminiResponse = async (history: { role: "user" | "model"; parts
     }
 
     try {
-        // Use gemini-flash-latest as it maps to the correct model for this key (gemini-2.5-flash)
-        const model = genAI.getGenerativeModel({ model: "gemini-flash-latest" });
+        // Use gemini-2.0-flash as it is available for this key
+        const model = genAI.getGenerativeModel({ model: "gemini-2.0-flash" });
 
         // Construct chat history with system prompt context
         const chat = model.startChat({
@@ -98,7 +98,7 @@ export const getGeminiResponse = async (history: { role: "user" | "model"; parts
                     parts: [{ text: "Understood. I am ready to assist as Lilly's Printing AI." }],
                 },
                 ...history.map(msg => ({
-                    role: msg.role,
+                    role: msg.role === "model" ? "model" : "user",
                     parts: [{ text: msg.parts }],
                 })),
             ],
